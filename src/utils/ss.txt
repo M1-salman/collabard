@@ -1,0 +1,25 @@
+import { render, screen } from "@testing-library/react";
+import HeroSection from "@/components/pages/Home/heroSection";
+
+describe("HeroSection", () => {
+  it("should render Video Calls & Collaborative Meetings", () => {
+    render(<HeroSection />);
+
+    const heading = screen.getByRole("heading");
+    expect(heading).toBeInTheDocument();
+  });
+});
+
+
+import { render, screen } from "@testing-library/react";
+import Nav from "@/components/nav";
+
+describe("Nav", () => {
+  it("should render navbar collabard", () => {
+    render(<Nav />);
+
+    const heading = screen.getByRole("heading");
+    expect(heading).toBeInTheDocument();
+  });
+});
+
