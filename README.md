@@ -27,8 +27,11 @@ When you open the collabard app and click on create your room, and then create a
 1. Linkedin :- add your link
 2. Twitter :- add your link
 
-## Installation
+### Prerequisite
 
+- Node.js (Version: 18)
+
+## Installation
 1. Clone the GitHub repository
    ```sh
    git clone https://github.com/M1-salman/collabard.git
