@@ -44,4 +44,21 @@ When you open the collabard app and click on create your room, and then create a
 
 6. Open a browser to http://localhost:3000
 
+### Docker installation
+1. Clone the GitHub repository
+   ```sh
+   git clone https://github.com/M1-salman/collabard.git
+   ```
+
+2. Go to the project folder collabard
+
+3. Create .env file and add your keys, for reference you can use .env.example
+
+4.  Run this command
+   ```sh
+     docker run -it -p 3000:3000 --env-file .env m1salman/collabard
+   ```
+
+5. Open a browser to http://localhost:3000
+
 ## Thank you
