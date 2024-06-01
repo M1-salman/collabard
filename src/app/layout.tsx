@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 import { SessionProvider } from "next-auth/react";
 import { auth } from "@/auth";
+import CustomBackground from "@/components/custom-background";
 
 export const metadata: Metadata = {
   metadataBase: new URL(`${process.env.NEXT_PUBLIC_BASE_URL}`),
@@ -28,6 +29,7 @@ export default async function RootLayout({
     <SessionProvider session={session}>
       <html lang="en" className="dark">
         <body>
+          <CustomBackground />
           <Nav />
           {children}
           <Toaster />
