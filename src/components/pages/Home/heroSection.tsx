@@ -80,7 +80,7 @@ const HeroSection = () => {
         <div className="flex justify-center sm:justify-normal">
           {" "}
           <DropdownMenu>
-            <DropdownMenuTrigger className="mx-4 h-9 sm:px-4 px-8 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90">
+            <DropdownMenuTrigger className="mx-4 h-9 sm:px-4 px-7 py-2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground shadow hover:bg-primary/90">
               Create your room
             </DropdownMenuTrigger>
             <DropdownMenuContent className="mt-1">

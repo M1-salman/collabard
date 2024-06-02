@@ -36,7 +36,7 @@ const DialogBox = ({ randomUrl }: { randomUrl: string }) => {
         </DialogTrigger>
       </div>
       <DialogContent
-        className="sm:max-w-md"
+        className="sm:max-w-md max-w-[23rem] rounded-md"
         onClick={(e) => e.stopPropagation()}
       >
         <DialogHeader>
