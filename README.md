@@ -19,6 +19,9 @@ With the help of Collabard, you can create a room and share the room ID with you
 - Supabase
 - Docker
 - Jest + React testing library
+- SEO
+- Cross-site scripting (XSS) protected
+- SQL injection protected
 
 ### More about the project
 When you open the collabard app and click on create your room, and then create an instant room, it pushes you to a dynamic room, and the room ID is generated using nanoid. You can also create a room for later that you can share with your friends, and you can also directly join a room by entering your own room ID in the input box. When you want to join a room without logging in, you will be redirected to the registration page because the room is protected by the middleware. You can register with your own email ID by registering it and then verifying it through the email verification link that is sent to your email through Nodemailer. The input validation of the form are handled by the Zod schema with react-hook-form. All the user details are saved in a postgreSQL database using Prisma-ORM in a structured format. You can also register using your gmail ID or github ID implemented using OAuth. I have also written test cases using jest + react testing library for every possible component. For easy deployment or setup implemented Docker and created a custom image of the collabard app that is available on docker hub.
