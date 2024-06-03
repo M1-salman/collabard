@@ -145,7 +145,7 @@ const RegisterForm = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-[5px] w-full h-11" />
             <div className="py-1 mt-2 w-full bg-zinc-800 rounded-[5px] relative group transition duration-200 text-white hover:bg-transparent text-lg">
-              Register &rarr;
+              {!isPending ? "Register →" : "Registering..."}
             </div>
           </Button>
         </form>
