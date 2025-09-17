@@ -20,6 +20,12 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
   const { name, email, password } = validatedFields.data;
   const hashedPassword = await bcrypt.hash(password, 10);
 
+   try {
+    await db.$queryRaw`SELECT 1`; 
+  } catch (err) {
+    return { error: "Database is paused, contact: salmanmasood917@gmail.com" };
+  }
+
   const existingUser = await getUserByEmail(email);
 
   // display text if email is taken

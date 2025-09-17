@@ -10,6 +10,7 @@ import { DEFAULT_LOGIN_REDIRECT } from "@/routes";
 import { getUserByEmail } from "@/data/user";
 import { generateVerificationToken } from "@/lib/tokens";
 import { sendVerificationEmail } from "@/lib/mail";
+import { db } from "@/lib/db";
 
 export const login = async (values: z.infer<typeof LoginSchema>) => {
   // Validate fields
@@ -18,6 +19,12 @@ export const login = async (values: z.infer<typeof LoginSchema>) => {
   // If fields are not valid
   if (!validatedFields.success) {
     return { error: "Invalid fields 😞" };
+  }
+
+  try {
+    await db.$queryRaw`SELECT 1`; 
+  } catch (err) {
+    return { error: "Database is paused, contact: salmanmasood917@gmail.com" };
   }
 
   const { email, password } = validatedFields.data;
